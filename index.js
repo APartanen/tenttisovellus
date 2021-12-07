@@ -1,5 +1,5 @@
 const app = require('./app')
-const https = require('https')
+const http = require('http')
 const fs = require('fs')
 
 /**
@@ -15,6 +15,6 @@ let options = {
 }
 
 const PORT = process.env.PORT || 3001
-var server = https.createServer(options, app).listen(PORT, function(){
+var server = http.createServer(options, app).listen(PORT, function(){
  console.log("Express server listening on port " + PORT);
 });
